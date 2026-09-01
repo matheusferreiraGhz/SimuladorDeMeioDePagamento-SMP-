@@ -1,0 +1,41 @@
+.conteiner{
+    width: 1000px;
+    height: 500px;
+    margin:auto;
+
+}
+.titulo1{
+    padding-left:275px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.texto1{
+    padding-left:300px;
+    padding-top:20px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.texto2{
+    padding-left:300px;
+    padding-top:20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.texto3{
+    padding-left:300px;
+    padding-top:40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.caixa1{
+    margin-left:300px;
+
+}
+.caixa2{
+    margin-left:300px;
+
+}
+.formulario{
+    margin-left:300px;
+    padding-top:20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+

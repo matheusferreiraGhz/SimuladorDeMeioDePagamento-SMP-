@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem Vindo ao SMP</title>
+    <link rel="stylesheet" href="css/estilo.css"></a>
+</head>
+<body>
+    <div class="conteiner">
+            <div class="linha">
+            <h1 class="titulo1"> <strong>Aplicação de DOAÇÃO </strong></h1>
+            <p class="texto1">Código do benfeitor:</p>
+            <textarea class="caixa1"></textarea>
+            <p class="texto2">Valor a ser Doado:</p>
+            <textarea class="caixa2"></textarea>
+            <form class="formulario" action="Cprogram/confirmacao.c" method="post">
+                <p> Selecione um método de Doação abaixo:</p>
+
+                <label>
+                    <input type="radio" name="metodo" value="Botão1" checked>
+                    PIX
+                </label> </br>
+                <label>
+                    <input type="radio" name="metodo" value="Botão1" checked>
+                    Débito
+                </label> </br>
+                <label>
+                    <input type="radio" name="metodo" value="Botão1" checked>
+                    Cartão de Crédito
+                </label> </br> <br>
+                <button type="submit">Enviar Doação</button>
+            </form>            
+        </div>
+
+    </div>
+
+</body>
+</html>
