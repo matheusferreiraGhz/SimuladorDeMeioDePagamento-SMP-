@@ -14,7 +14,7 @@
             <form class="formulario" action="../confirmacao.php" method="post">
                 <p class="codigo">
                     <label for="codigo">Código do Benfeitor:</label> <br> <br>
-                    <input type="text" 
+                    <input type="numeric" 
                            inputmode="numeric"
                            maxlength="6"
                            placeholder="123456"
@@ -28,7 +28,7 @@
 
                 <p class="valor">
                     <label for="valor">Valor a ser Doado:</label> <br> <br>
-                    <input type="text" 
+                    <input type="numeric"
                            inputmode="decimal"
                            placeholder="100.00"
                            id="valor"
@@ -37,8 +37,8 @@
                            required
                     >
                 </p>
-
-                <p> Selecione um método de Doação abaixo:</p>
+            <div class="botao">
+            <p> Selecione um método de Doação abaixo:</p>
 
                 <label>
                     <input type="radio" name="metodo" value="PIX" checked>
@@ -54,6 +54,7 @@
                 </label> </br> <br>
                 <button type="submit">Enviar Doação</button>
             </form>
+            </div>
         </div>
     </div>
 
