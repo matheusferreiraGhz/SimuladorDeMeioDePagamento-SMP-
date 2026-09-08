@@ -1,12 +1,24 @@
+body{
+    background-color: rgb(16, 3, 32);
+    
+}
+.p{
+    padding:0;
+}
+
 .conteiner{
     width: 1000px;
     height: 500px;
     margin:auto;
+    background-color: grey;
+    border-radius: 13px;
+    margin-top: 100px;
 
 }
 .titulo1{
     padding-left:275px;
     font-family: Arial, Helvetica, sans-serif;
+    padding-top:20px;
 }
 .texto1{
     padding-left:300px;
@@ -25,13 +37,57 @@
     padding-top:40px;
     font-family: Arial, Helvetica, sans-serif;
 }
+.texto4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding-right: 40px;
+    
+}
+.texto5{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    padding-right: 40px;
+}
 .formulario{
     margin-left:300px;
-    padding-top:30px;
+    
     font-family: Arial, Helvetica, sans-serif;
 }
 .botao{
-    padding-top:20px;
+    margin-top:20px;
+    border-radius: 10px;
+    border-color: transparent;
+    color: white;
+    font-family: arial, Helvetica, sans-serif;
+    margin-top: 15px;
+    font-size: 20px;
+    background-color: black;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    border:#ff6b6b;
+    cursor: pointer;
+
+}
+.op1{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.op2{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.copyright{
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
 }
 
 
