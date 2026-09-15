@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const { execFile } = require("child_process");
 
-const PORT = 3000;
+const PORT = 5810;
 
 // C program
 const cProgram = path.join(__dirname, "cprogram/processamento.exe");
@@ -15,7 +15,7 @@ const server = http.createServer((req, res) => {
     // --------------------------------
     if (req.method === "GET" && req.url === "/") {
 
-        const filePath = path.join(__dirname, "public", "index.html");
+        const filePath = path.join(__dirname, "publico", "inicial.html");
 
         fs.readFile(filePath, "utf8", (err, data) => {
 
@@ -24,7 +24,7 @@ const server = http.createServer((req, res) => {
                     "Content-Type": "text/plain; charset=UTF-8"
                 });
 
-                res.end("Erro ao carregar index.html");
+                res.end("Erro ao carregar inicial.html");
                 return;
             }
 
@@ -36,6 +36,43 @@ const server = http.createServer((req, res) => {
         });
 
         return;
+    }
+
+
+    // --------------------------------
+    // Static files from publico
+    // --------------------------------
+    if (req.method === "GET") {
+
+        const requestedPath = decodeURIComponent(req.url.split("?")[0]);
+        const publicRoot = path.resolve(__dirname, "publico");
+        const filePath = path.resolve(publicRoot, `.${requestedPath}`);
+
+        if (filePath.startsWith(`${publicRoot}${path.sep}`)) {
+            const contentTypes = {
+                ".css": "text/css; charset=UTF-8",
+                ".jpeg": "image/jpeg",
+                ".jpg": "image/jpeg",
+                ".png": "image/png"
+            };
+            const contentType = contentTypes[path.extname(filePath).toLowerCase()];
+
+            if (contentType) {
+                fs.readFile(filePath, (err, data) => {
+                    if (err) {
+                        res.writeHead(err.code === "ENOENT" ? 404 : 500, {
+                            "Content-Type": "text/plain; charset=UTF-8"
+                        });
+                        res.end(err.code === "ENOENT" ? "Arquivo não encontrado." : "Erro ao carregar arquivo.");
+                        return;
+                    }
+
+                    res.writeHead(200, { "Content-Type": contentType });
+                    res.end(data);
+                });
+                return;
+            }
+        }
     }
 
 
@@ -56,8 +93,8 @@ const server = http.createServer((req, res) => {
             // Convert form data
             const params = new URLSearchParams(body);
 
-            const codigo = params.get("codigo");
-            const valor = params.get("valor");
+            const codigo = params.get("codigo") ?? params.get("codigo_doador");
+            const valor = params.get("valor") ?? params.get("valor_doador");
             const paymentMethod = params.get("meio");
 
 

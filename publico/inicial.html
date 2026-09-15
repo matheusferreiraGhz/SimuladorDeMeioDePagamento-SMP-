@@ -11,7 +11,7 @@
         <div class="linha">
             <h1 class="titulo1"> <strong>Aplicação de DOAÇÃO </strong></h1>
 
-            <form class="formulario" action="../confirmacao.php" method="post">
+            <form class="formulario" action="/pagto" method="post">
                 <p class="codigo">
                     <label for="codigo">Código do Benfeitor:</label> <br> <br>
                     <input type="numeric" 
@@ -21,7 +21,7 @@
                            placeholder="123456"
                            pattern="[0-9]{1,6}"
                            id="codigo"
-                           name="codigo_doador"
+                           name="codigo"
                            title="Digite um código de 6 dígitos"
                            class="op1"
                            required
@@ -35,7 +35,7 @@
                            inputmode="decimal"
                            placeholder="100.00"
                            id="valor"
-                           name="valor_doador"
+                           name="valor"
                            title="Digite um valor a ser doado"
                            class="op2"
                            required
@@ -45,16 +45,16 @@
             <p class="texto4"> <strong>Selecione um método de Doação abaixo:</strong></p>
 
                 <label>
-                    <input type="radio" name="metodo" value="PIX" checked>
+                    <input type="radio" name="meio" value="pix" checked>
                     PIX 
                     <img src="img/pix.jpeg" alt="PIX" width="30" height="20">
                 </label> </br>
                 <label>
-                    <input type="radio" name="metodo" value="Debito">
+                    <input type="radio" name="meio" value="debito">
                     Débito 
                 </label> </br>
                 <label>
-                    <input type="radio" name="metodo" value="Cartao de Credito">
+                    <input type="radio" name="meio" value="credito">
                     Cartão de Crédito 
                 </label> </br> 
                 <label class="texto5"> (Cartão de Crédito Possui 5% de MDR, Débito Possui 1% de MDR </br> e PIX não possui taxas)</label> </br> 
