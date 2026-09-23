@@ -129,7 +129,7 @@ const server = http.createServer((req, res) => {
 
             console.log("Código:", codigo);
             console.log("Valor:", valor);
-            console.log("Método:", metodo);
+            console.log("Método:", paymentMethod);
 
 
             // --------------------------------
@@ -174,21 +174,23 @@ const server = http.createServer((req, res) => {
                         <head>
                             <meta charset="UTF-8">
                             <title>Processamento</title>
+                            <link rel="stylesheet" href="css/processo.css">
                         </head>
 
                         <body>
+                            <div class="box">
+                            <h1 class="titulo">Resultado do processamento</h1>
 
-                            <h1>Resultado do processamento</h1>
+                            <p class="valor"><strong>Código do Doador:</strong> ${codigo}</p>
+                            <p class="valor"><strong>Valor doado:</strong> ${valor}</p>
+                            <p class="valor"><strong>Método de pagamento Utilizado:</strong> ${paymentMethod}</p>
 
-                            <p><strong>Código:</strong> ${codigo}</p>
-                            <p><strong>Valor:</strong> ${valor}</p>
-                            <p><strong>Método:</strong> ${metodo}</p>
+                            <h2 class="titulo">Resposta do programa C:</h2>
 
-                            <h2>Resposta do programa C:</h2>
+                            <pre class="valor">${stdout}</pre>
 
-                            <pre>${stdout}</pre>
-
-                            <a href="/">Voltar</a>
+                            <a href="/" class="botao">Voltar</a>
+                            </div>
 
                         </body>
                         </html>

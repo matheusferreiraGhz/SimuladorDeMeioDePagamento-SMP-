@@ -10,7 +10,7 @@
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "C:\\TEMP\\msys64\\mingw64\\bin/gcc"
+            "compilerPath": "C:\\msys64\\ucrt64\\bin\\gcc"
         }
     ],
     "version": 4

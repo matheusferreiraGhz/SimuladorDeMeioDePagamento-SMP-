@@ -1,0 +1,42 @@
+body{
+    background:linear-gradient(to right, black,grey);
+    color: grey
+    
+    
+}
+.p{
+    padding:0;
+}
+.box {
+    width: 1000px;
+    height: 700px;
+    margin:auto;
+    background: linear-gradient(to right,darkblue, black);
+    border-radius: 13px;
+    margin-top: 100px;
+}
+.titulo{
+    padding-left:275px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-top:20px;
+}
+.valor{
+    padding-left:300px;
+    padding-top:20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.botao{
+    margin-top:20px;
+    border-color: transparent;
+    color: white;
+    font-family: arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: black;
+    width: 200px;
+    height: 70px;
+    text-align: center;
+    border:transparent;
+    cursor: pointer;
+    margin-left:470px;
+}
